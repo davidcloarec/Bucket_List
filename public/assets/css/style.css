@@ -37,7 +37,7 @@ li{
     font-size: 30px;
 }
 
-a{
+.wish > a, li > a{
     text-decoration: none;
     background-color: lightseagreen;
     border-radius: 25px;
@@ -59,11 +59,11 @@ img{
 }
 
 @keyframes jiggle {
-    20%  {translate: 5px 5px;}
-    40%  {translate: -5px 0px;}
-    50%  {translate: 0px -5px;}
-    60%  {translate: 5px -5px;}
-    80%  {translate: -5px 5px;}
+    20%  {translate: 2rem 2rem; rotate: 10deg;}
+    40%  {translate: -2rem 0rem;rotate: -40deg;}
+    50%  {translate: 0rem -2rem;rotate: 30deg;}
+    60%  {translate: 2rem -2rem;rotate: -10deg;}
+    80%  {translate: -2rem 2rem;rotate: 20deg;}
 }
 
 .center{
@@ -92,4 +92,11 @@ img{
 
 .color{
     color: #B0413E;
+}
+
+.gif{
+    position: fixed;
+    margin-top: 600px;
+    height: 400px;
+    border-radius: 40px;
 }

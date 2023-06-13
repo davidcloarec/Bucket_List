@@ -2,6 +2,7 @@ window.onload = init();
 
 function init(){
     document.getElementById('logo').addEventListener('click', jiggle);
+    document.getElementById('bucket').addEventListener('click', jiggle);
 }
 
 function jiggle(event){
