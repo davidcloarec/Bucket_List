@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+    font-family: 'Dancing Script', cursive;
+}
+
+body{
+    margin: 0;
+    background-color: azure;
+}
+
+main{
+    height: 78vh;
+}
+
+header{
+    display: flex;
+    background: linear-gradient(cadetblue,lightblue);
+    border: cadetblue solid 3px;
+}
+
+footer, h1, h2{
+    text-align: center;
+}
+
+nav{
+    align-self: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-right: 3rem;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    background-color: lightseagreen;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid #93c5fd;
+}
+
+img{
+    height: 50px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.jiggle{
+    animation-name: jiggle;
+    animation-duration: 0.2s;
+}
+
+@keyframes jiggle {
+    20%  {translate: 5px 5px;}
+    40%  {translate: -5px 0px;}
+    50%  {translate: 0px -5px;}
+    60%  {translate: 5px -5px;}
+    80%  {translate: -5px 5px;}
+}
+
+.center{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wish{
+    width: 20vw;
+    height: 22vh;
+    border: 5px solid #93c5fd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.big, .color{
+    font-size: 30px;
+    text-align: center;
+}
+
+.color{
+    color: #B0413E;
+}
