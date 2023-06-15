@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DQL{% endblock %}
+
+{% block body %}
+    <h1>DQL</h1>
+    <p class="center big color">
+        {% for animal in animals %}
+            {{ animal.id }} : {{ animal.name }}
+        {% endfor %}
+    </p>
+{% endblock %}

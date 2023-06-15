@@ -5,12 +5,11 @@
 }
 
 body{
-    margin: 0;
     background-color: azure;
 }
 
 main{
-    height: 78vh;
+    height: 80vh;
 }
 
 header{
@@ -19,12 +18,12 @@ header{
     border: cadetblue solid 3px;
 }
 
-footer, h1, h2{
+footer, h1, h2, .center{
     text-align: center;
 }
 
-nav{
-    align-self: center;
+main>h1{
+    margin-top: 20px;
 }
 
 ul{
@@ -33,11 +32,10 @@ ul{
 }
 
 li{
-    margin-right: 3rem;
     font-size: 30px;
 }
 
-.wish > a, li > a{
+li > a{
     text-decoration: none;
     background-color: lightseagreen;
     border-radius: 25px;
@@ -66,11 +64,7 @@ img{
     80%  {translate: -2rem 2rem;rotate: 20deg;}
 }
 
-.center{
-    text-align: center;
-}
-
-.container{
+.content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -78,7 +72,7 @@ img{
 
 .wish{
     width: 20vw;
-    height: 22vh;
+    height: 28vh;
     border: 5px solid #93c5fd;
     margin: 10px;
     padding: 10px;

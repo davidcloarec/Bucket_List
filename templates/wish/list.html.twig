@@ -4,12 +4,16 @@
 
 {% block body %}
     <h1>Liste</h1>
-    <div class="container">
-        {% for key, wish in wishes %}
+    <div class="content">
+        {% for wish in wishes %}
         <div class="wish">
-            <p class="big">Le souhait est : </p>
-            <p class="color">{{ wish }}</p>
-            <a class="big" href="{{ path('wish_detail',{'id':key}) }}">Consulter</a>
+            <div class="big">
+                <p>Le souhait est : </p>
+                <p class="color">{{ wish.title }}</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="btn btn-success big" href="{{ path('wish_detail',{'id':wish.id}) }}">Consulter</a>
+            </div>
         </div>
         {% endfor %}
     </div>

@@ -4,12 +4,32 @@
 
 {% block body %}
     <h1>Details</h1>
-    <div class="container">
-            <div class="wish">
-                <p class="big">Le souhait est : </p>
-                <p class="color">{{ wish }}</p>
-                <a class="big" href="{{ path('wish_list')}}">Retour</a>
+    <div class="content">
+        <div>
+            <div class="big">
+                <p>Le souhait est : <b class="color">{{ wish.title }}</b></p>
             </div>
+            <div class="big">
+                <p>Description : <b class="color">{{ wish.description }}</b></p>
+            </div>
+            <div class="big">
+                <p>Auteur : <b class="color">{{ wish.author }}</b></p>
+            </div>
+            <div class="big">
+                <p>Validé :
+                    {% if wish.isPublished %}
+                        <b class="text-success">Oui</b>
+                    {% else %}
+                        <b class="text-danger">Non</b>
+                    {% endif %}
+                </p>
+            </div>
+            <div class="big">
+                <p>Date de création : <b class="color">{{ wish.dateCreated|date("d F Y - H:i:s") }}</b></p>
+            </div>
+            <div class="justify-content-center d-flex">
+                <a class="btn btn-danger big" href="{{ path('wish_list')}}">Retour</a>
+            </div>
+        </div>
     </div>
-
 {% endblock %}
