@@ -6,14 +6,6 @@
     <h1>Details</h1>
     <div class="content">
         <div>
-            {% for label, messages in app.flashes %}
-                {% for message in messages %}
-                    <div class="alert alert-dismissible alert-{{ label }}">
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        <strong>{{message}}</strong>
-                    </div>
-                {% endfor %}
-            {% endfor %}
             <div class="big">
                 <p>Le souhait est : <b class="color">{{ wish.title }}</b></p>
             </div>
@@ -34,6 +26,9 @@
             </div>
             <div class="big">
                 <p>Date de création : <b class="color">{{ wish.dateCreated|date("d F Y - H:i:s") }}</b></p>
+            </div>
+            <div class="big">
+                <p>Catégorie : {{ wish.category.name }}</p>
             </div>
             <div class="justify-content-center d-flex">
                 <a class="btn btn-danger big" href="{{ path('wish_list')}}">Retour</a>

@@ -29,12 +29,23 @@
             </nav>
         </header>
 
+        <div class="content">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-dismissible alert-{{ label }} mt-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong>{{message}}</strong>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
         <main>
             {% block body %}{% endblock %}
         </main>
 
         <footer>
-           <p>&copy Bucket-List - 2023</p>
+                <p>&copy Bucket-List - 2023</p>
         </footer>
         <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
