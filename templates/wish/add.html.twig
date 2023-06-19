@@ -3,27 +3,38 @@
 {% block title %}Ajouter{% endblock %}
 
 {% block body %}
-    <h1>Ajouter</h1>
+    <h1>Ajouter un souhait !</h1>
     <div class="content">
-        {% if ajout is defined %}
-        <p class="big color">{{ ajout }}</p>
-        {% endif %}
-        <form action="" method="POST">
-            <div class="card card-header mb-3 mt-3 big">
-                <label for="title">Titre</label>
-                <input type="text" name="title">
+        {{ form_start(wishForm) }}
+
+        <div class="card card-header mb-3 mt-3 big">
+            {{ form_label(wishForm.title) }}
+            {{ form_widget(wishForm.title) }}
+            <div class="text-danger">
+                {{ form_errors(wishForm.title) }}
             </div>
-            <div class="card card-header mb-3  big">
-                <label for="description">Description</label>
-                <textarea name="description" cols="20" rows="3"></textarea>
+        </div>
+
+        <div class="card card-header mb-3  big">
+            {{ form_label(wishForm.description) }}
+            {{ form_widget(wishForm.description) }}
+            <div class="text-danger">
+                {{ form_errors(wishForm.description) }}
             </div>
-            <div class="card card-footer mb-3 big">
-                <label for="author">Auteur</label>
-                <input type="text" name="author">
+        </div>
+
+        <div class="card card-footer mb-3 big">
+            {{ form_label(wishForm.author) }}
+            {{ form_widget(wishForm.author) }}
+            <div class="text-danger">
+                {{ form_errors(wishForm.author) }}
             </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-success big" type="submit">Creer</button>
-            </div>
-        </form>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-success big" type="submit">Creer</button>
+        </div>
+
+        {{ form_end(wishForm) }}
     </div>
 {% endblock %}
